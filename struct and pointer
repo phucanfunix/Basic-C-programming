@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+struct hocsinh{//khai bao cau truc distance dung keyword typedef
+    int id;//khai bao thanh phan thu tu hoc sinh trong danh sach
+    char ten[25];//khai bao thanh phan ten;
+    int tuoi;//khai bao thanh phan tuoi;
+    char diachi[128];//khai bao thanh phan dia chi;
+    float gpa;//khai bao thanh phan GPA;
+};
+
+int main()
+{
+    struct hocsinh hs={24,"thanh",23,"chanh nghia",50};//khai bao bien hs voi cac thanh phan cua struc
+    struct hocsinh *ptr_main;//khai bao pointer ptr_main
+    ptr_main=&hs;
+    printf("%s",*ptr_main->ten);
+
+
+
+    return 0;
+}
